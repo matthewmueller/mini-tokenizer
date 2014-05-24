@@ -15,7 +15,7 @@
 var tokenize = require('mini-tokenizer');
 
 // regex for U.S. telephone numbers (incomplete)
-var rtelephone = /(\d{3})[\-\. ]?(\d{3})[\-\. ](\d{4})/g
+var rtelephone = /(\d{3})[\-\. ]?(\d{3})[\-\. ]?(\d{4})/g
 
 // compile the tokenizer
 var tokens = tokenize(rtelephone, '+1 ($1) $2-$3');
