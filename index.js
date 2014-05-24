@@ -48,12 +48,3 @@ function compile(str) {
   expr = '\'' + expr + '\'';
   return new Function('$', 'return ' + expr);
 }
-
-// U.S. telephone numbers
-var rtelephone = /(\d{3})[\-\. ]?(\d{3})[\-\. ](\d{4})/g
-var input = '782.312.5313, 902 534 6245, 324-342-6666';
-
-// compile the tokenizer
-var fn = tokens(rtelephone, '+1 ($1) $2-$3');
-console.log(fn(input)); // 
-
