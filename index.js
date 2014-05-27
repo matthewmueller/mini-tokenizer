@@ -29,7 +29,8 @@ function tokens(regex, rep) {
 
     str.replace(regex, function() {
       var args = slice.call(arguments);
-      toks.push(rep(args));
+      var tok = rep(args);
+      tok && toks.push(tok);
     });
 
     return toks;
@@ -45,9 +46,9 @@ function tokens(regex, rep) {
 
 function compile(str) {
   var expr = str.replace(rrep, function(m) {
-    var out = '\' + $[';
+    var out = '\' + ($[';
     out += '&' == m[1] ? 0 : m[1];
-    out += '] + \'';
+    out += '] || \'\') + \'';
     return out;
   })
 
