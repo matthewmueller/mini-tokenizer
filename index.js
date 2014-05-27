@@ -7,6 +7,12 @@ var slice = [].slice;
 var noop = function(m) { return m[0]; }
 
 /**
+ * Expose `tokens`
+ */
+
+module.exports = tokens;
+
+/**
  * Create a tokenizer
  *
  * @param {Regex} regex
