@@ -2,7 +2,7 @@
   "name": "mini-tokenizer",
   "repo": "matthewmueller/mini-tokenizer",
   "description": "tiny tokenizer for simple parsing",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "keywords": [],
   "dependencies": {},
   "development": {},
